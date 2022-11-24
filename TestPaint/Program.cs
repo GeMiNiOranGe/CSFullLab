@@ -4,8 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//dotNET framework 4.8.1
-namespace MyPaint {
+namespace TestPaint {
     static class Program {
         /// <summary>
         /// The main entry point for the application.
@@ -14,7 +13,7 @@ namespace MyPaint {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBasicPaint());
+            Application.Run(new Form1());
         }
     }
 }
