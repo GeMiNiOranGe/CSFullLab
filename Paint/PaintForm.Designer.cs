@@ -189,6 +189,7 @@
             // 
             this.helpAboutMnu.Index = 0;
             this.helpAboutMnu.Text = "&About...";
+            this.helpAboutMnu.Click += new System.EventHandler(this.helpAboutMnu_Click);
             // 
             // statusBar
             // 

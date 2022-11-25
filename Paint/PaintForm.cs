@@ -303,5 +303,9 @@ namespace Paint {
             curTool = new PointerTool(toolArgs);
             SetToolBarButtonsState(arrowBtn);
         }
+
+        private void helpAboutMnu_Click(object sender, EventArgs e) {
+            new FormAbout().ShowDialog();
+        }
     }
 }
