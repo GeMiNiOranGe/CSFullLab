@@ -12,9 +12,13 @@ namespace MyPaint {
     public partial class FormBasicPaint : Form {
         public FormBasicPaint() {
             InitializeComponent();
+            bitmap = new Bitmap(picBox.Width, picBox.Height);
+            graphics = Graphics.FromImage(bitmap);
+            graphics.Clear(Color.White);
+            picBox.Image = bitmap;
         }
 
-        private void FormBasicPaint_Paint(object sender, PaintEventArgs e) {
+        //private void FormBasicPaint_Paint(object sender, PaintEventArgs e) {
             //Graphics graphics = this.CreateGraphics();
 
             //Pen pen = new Pen(Color.Red, 2);
@@ -34,17 +38,18 @@ namespace MyPaint {
             //e.Graphics.FillRectangle(brush, 120, 180, 100, 60);
 
             //e.Graphics.FillEllipse(new SolidBrush(Color.SkyBlue), 300, 100, 100, 200);
-        }
+        //}
 
         private Color borderColor;
         private Color fillColor;
-        private bool mouse_is_down = false;
-        private Point start;
+        private bool isMousePressDown;
+        private Point startPoint, endPoint;
         private Graphics graphics;
-        public List<Graphics> graphicsList;
+        private Bitmap bitmap;
+        private Rectangle rectangleTemp;
 
         private void FormBasicPaint_Load(object sender, EventArgs e) {
-            graphics = pnl.CreateGraphics();
+            graphics = picBox.CreateGraphics();
             borderColor = Color.Black;
             btnBorderColor.BackColor = borderColor;
             fillColor = Color.Red;
@@ -71,83 +76,48 @@ namespace MyPaint {
             }
         }
 
-        private void pnl_MouseDown(object sender, MouseEventArgs e) {
-            mouse_is_down = true;
-            start = new Point(e.X, e.Y);        }
+        private void picBox_MouseDown(object sender, MouseEventArgs e) {
+            isMousePressDown = true;
+            startPoint = new Point(e.X, e.Y);
+        }
 
-        private void pnl_MouseUp(object sender, MouseEventArgs e) {
-            mouse_is_down = false;
-            if (!mouse_is_down) {
-                graphics.Clear(pnl.BackColor);
-                Point end = new Point(e.X, e.Y);
+        private void picBox_MouseUp(object sender, MouseEventArgs e) {
+            isMousePressDown = false;
+        }
+
+        private void picBox_MouseMove(object sender, MouseEventArgs e) {
+            if (isMousePressDown) {
+                picBox.Refresh();
+                endPoint = new Point(e.X, e.Y);
                 switch (cbTypeShape.SelectedIndex) {
                     //line
                     case 0:
                         graphics.DrawLine(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start, end);
+                            startPoint, endPoint);
                         break;
                     //empty ellipse.
                     case 1:
                         graphics.DrawEllipse(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
+                            GetRectangleFromPoints(startPoint, endPoint));
                         break;
                     //filled ellipse
                     case 2:
                         graphics.DrawEllipse(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
+                            GetRectangleFromPoints(startPoint, endPoint));
                         graphics.FillEllipse(new SolidBrush(fillColor),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
+                            GetRectangleFromPoints(startPoint, endPoint));
                         break;
                     //empty rectangle
                     case 3:
                         graphics.DrawRectangle(new Pen(borderColor, (int)nudBorderSize.Value),
-                            /*start.X, start.Y, e.X - start.X, e.Y - start.Y*/GetRectangleFromPoints(start, end));
+                            GetRectangleFromPoints(startPoint, endPoint));
                         break;
                     //filled rectangle
                     case 4:
                         graphics.DrawRectangle(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
+                            GetRectangleFromPoints(startPoint, endPoint));
                         graphics.FillRectangle(new SolidBrush(fillColor),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
-                        break;
-                    default:
-                        break;
-                }
-            }        }
-
-        private void pnl_MouseMove(object sender, MouseEventArgs e) {
-            if (mouse_is_down) {
-                graphics.Clear(pnl.BackColor);
-                Point end = new Point(e.X, e.Y);
-                switch (cbTypeShape.SelectedIndex) { 
-                    //line
-                    case 0:
-                        graphics.DrawLine(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start, end);
-                        break;
-                    //empty ellipse.
-                    case 1:
-                        graphics.DrawEllipse(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
-                        break;
-                    //filled ellipse
-                    case 2:
-                        graphics.DrawEllipse(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
-                        graphics.FillEllipse(new SolidBrush(fillColor),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
-                        break;
-                    //empty rectangle
-                    case 3:
-                        graphics.DrawRectangle(new Pen(borderColor, (int)nudBorderSize.Value),
-                            /*start.X, start.Y, e.X - start.X, e.Y - start.Y*/GetRectangleFromPoints(start,end));
-                        break;
-                    //filled rectangle
-                    case 4:
-                        graphics.DrawRectangle(new Pen(borderColor, (int)nudBorderSize.Value),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
-                        graphics.FillRectangle(new SolidBrush(fillColor),
-                            start.X, start.Y, e.X - start.X, e.Y - start.Y);
+                            GetRectangleFromPoints(startPoint, endPoint));
                         break;
                     default:
                         break;

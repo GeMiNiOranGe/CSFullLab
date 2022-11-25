@@ -33,10 +33,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnFillColor = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.pnl = new System.Windows.Forms.Panel();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBorderSize)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -167,23 +168,24 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Color";
             // 
-            // pnl
+            // picBox
             // 
-            this.pnl.BackColor = System.Drawing.Color.White;
-            this.pnl.Location = new System.Drawing.Point(147, 12);
-            this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(525, 437);
-            this.pnl.TabIndex = 4;
-            this.pnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseDown);
-            this.pnl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseMove);
-            this.pnl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseUp);
+            this.picBox.BackColor = System.Drawing.Color.White;
+            this.picBox.Location = new System.Drawing.Point(147, 12);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(525, 437);
+            this.picBox.TabIndex = 4;
+            this.picBox.TabStop = false;
+            this.picBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picBox_MouseDown);
+            this.picBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picBox_MouseMove);
+            this.picBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picBox_MouseUp);
             // 
             // FormBasicPaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.pnl);
+            this.Controls.Add(this.picBox);
             this.Controls.Add(this.cbTypeShape);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -196,12 +198,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basic paint";
             this.Load += new System.EventHandler(this.FormBasicPaint_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormBasicPaint_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBorderSize)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +221,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnFillColor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel pnl;
+        private System.Windows.Forms.PictureBox picBox;
     }
 }
 
