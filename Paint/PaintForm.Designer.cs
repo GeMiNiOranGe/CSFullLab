@@ -113,18 +113,21 @@
             // fileOpenMnu
             // 
             this.fileOpenMnu.Index = 1;
+            this.fileOpenMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
             this.fileOpenMnu.Text = "&Open...";
             this.fileOpenMnu.Click += new System.EventHandler(this.fileOpenMnu_Click);
             // 
             // fileSaveMnu
             // 
             this.fileSaveMnu.Index = 2;
+            this.fileSaveMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
             this.fileSaveMnu.Text = "&Save...";
             this.fileSaveMnu.Click += new System.EventHandler(this.fileSaveMnu_Click);
             // 
             // fileSaveAsMnu
             // 
             this.fileSaveAsMnu.Index = 3;
+            this.fileSaveAsMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS;
             this.fileSaveAsMnu.Text = "S&ave As...";
             this.fileSaveAsMnu.Click += new System.EventHandler(this.fileSaveAsMnu_Click);
             // 
@@ -136,6 +139,7 @@
             // fileExitMnu
             // 
             this.fileExitMnu.Index = 5;
+            this.fileExitMnu.Shortcut = System.Windows.Forms.Shortcut.AltF4;
             this.fileExitMnu.Text = "&Exit";
             this.fileExitMnu.Click += new System.EventHandler(this.fileExitMnu_Click);
             // 
@@ -151,18 +155,21 @@
             // editCutMnu
             // 
             this.editCutMnu.Index = 0;
+            this.editCutMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
             this.editCutMnu.Text = "&Cut";
             this.editCutMnu.Click += new System.EventHandler(this.editCutMnu_Click);
             // 
             // editCopyMnu
             // 
             this.editCopyMnu.Index = 1;
+            this.editCopyMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
             this.editCopyMnu.Text = "C&opy";
             this.editCopyMnu.Click += new System.EventHandler(this.editCopyMnu_Click);
             // 
             // editPasteMnu
             // 
             this.editPasteMnu.Index = 2;
+            this.editPasteMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
             this.editPasteMnu.Text = "&Paste";
             this.editPasteMnu.Click += new System.EventHandler(this.editPasteMnu_Click);
             // 
@@ -176,6 +183,7 @@
             // imageClearMnu
             // 
             this.imageClearMnu.Index = 0;
+            this.imageClearMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlDel;
             this.imageClearMnu.Text = "&Clear";
             this.imageClearMnu.Click += new System.EventHandler(this.imageClearMnu_Click);
             // 
@@ -189,12 +197,13 @@
             // helpAboutMnu
             // 
             this.helpAboutMnu.Index = 0;
+            this.helpAboutMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlH;
             this.helpAboutMnu.Text = "&About...";
             this.helpAboutMnu.Click += new System.EventHandler(this.helpAboutMnu_Click);
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 519);
+            this.statusBar.Location = new System.Drawing.Point(0, 493);
             this.statusBar.Margin = new System.Windows.Forms.Padding(4);
             this.statusBar.Name = "statusBar";
             this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
@@ -235,7 +244,7 @@
             this.toolsBar.MinimumSize = new System.Drawing.Size(30, 0);
             this.toolsBar.Name = "toolsBar";
             this.toolsBar.ShowToolTips = true;
-            this.toolsBar.Size = new System.Drawing.Size(30, 444);
+            this.toolsBar.Size = new System.Drawing.Size(30, 418);
             this.toolsBar.TabIndex = 2;
             this.toolsBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolsBar_ButtonClick);
             // 
@@ -294,7 +303,7 @@
             this.imgContainer.Location = new System.Drawing.Point(30, 75);
             this.imgContainer.Margin = new System.Windows.Forms.Padding(4);
             this.imgContainer.Name = "imgContainer";
-            this.imgContainer.Size = new System.Drawing.Size(955, 444);
+            this.imgContainer.Size = new System.Drawing.Size(955, 418);
             this.imgContainer.TabIndex = 3;
             // 
             // imageBox
@@ -508,7 +517,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 546);
+            this.ClientSize = new System.Drawing.Size(985, 520);
             this.Controls.Add(this.imgContainer);
             this.Controls.Add(this.toolsBar);
             this.Controls.Add(this.statusBar);
@@ -516,7 +525,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu;
             this.Name = "PaintForm";
-            this.Text = "STT5_Retarded_Paint";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Paint";
             this.Load += new System.EventHandler(this.PaintForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pointPanel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointPanel2)).EndInit();
