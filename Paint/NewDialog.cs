@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Paint
+namespace STT5_Retarded_Paint
 {
     public partial class NewDialog : Form
     {

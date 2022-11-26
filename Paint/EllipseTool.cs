@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class EllipseTool : RectangleTool {
         public EllipseTool(ToolArgs args) : base(args) { }
 

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class TextTool : Tool {
         public TextTool(ToolArgs args) : base(args) {
             args.pictureBox.Cursor = Cursors.Cross;

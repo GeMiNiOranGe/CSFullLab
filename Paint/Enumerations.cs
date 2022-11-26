@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public enum ClipboardAction {
         Cut,
         Copy,

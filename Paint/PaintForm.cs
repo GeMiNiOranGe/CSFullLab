@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public partial class PaintForm : Form, IPaintSettings {
         private ImageFile imageFile;
         private ToolArgs toolArgs;
@@ -292,7 +292,7 @@ namespace Paint {
 
         private void ShowImage() {
             string t = imageFile.FileName;
-            Text = String.Format("Paint - [{0}]", t == null ? "Untitled" : new FileInfo(t).Name);
+            Text = String.Format("STT5_Retarded_Paint - [{0}]", t == null ? "Untitled" : new FileInfo(t).Name);
 
             imageBox.ClientSize = imageFile.Bitmap.Size;
             imageBox.Invalidate();

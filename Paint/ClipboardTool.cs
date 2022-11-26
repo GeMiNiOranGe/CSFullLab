@@ -4,7 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class ClipboardTool : RectangleToolBase {
         private ClipboardAction action;
         private Rectangle prevRect;

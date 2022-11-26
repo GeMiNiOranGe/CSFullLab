@@ -1,4 +1,4 @@
-﻿namespace Paint {
+﻿namespace STT5_Retarded_Paint {
   partial class TextDialog {
     /// <summary>
     /// Required designer variable.

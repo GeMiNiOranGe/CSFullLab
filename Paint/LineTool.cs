@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class LineTool : Tool {
         private bool drawing;
         private Point sPoint;

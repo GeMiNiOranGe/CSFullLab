@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public abstract class Tool {
         protected ToolArgs args;
         protected Graphics g;

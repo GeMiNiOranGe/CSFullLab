@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class PencilTool : Tool {
         private bool drawing;
         private Graphics bmpGraphics;
