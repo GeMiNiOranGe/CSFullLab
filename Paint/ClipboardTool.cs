@@ -16,16 +16,11 @@ namespace STT5_Retarded_Paint {
         public ClipboardTool(ToolArgs args, ClipboardAction action) : base(args) {
             this.action = action;
             args.pictureBox.MouseClick += PictureBox_MouseClick;
-
-
         }
 
-        private void PictureBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                if (Clipboard.ContainsImage())
-                {
+        private void PictureBox_MouseClick(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Right) {
+                if (Clipboard.ContainsImage()) {
                     PasteImage(curPoint);
                     args.pictureBox.Invalidate();
                 }
