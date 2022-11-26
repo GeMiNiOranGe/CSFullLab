@@ -4,7 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class ClipboardTool : RectangleToolBase {
         private ClipboardAction action;
         private Rectangle prevRect;
@@ -15,19 +15,24 @@ namespace Paint {
 
         public ClipboardTool(ToolArgs args, ClipboardAction action) : base(args) {
             this.action = action;
-            args.pictureBox.MouseClick += new MouseEventHandler(OnMouseClick);
+            args.pictureBox.MouseClick += PictureBox_MouseClick;
+
+
         }
 
-        private void OnMouseClick(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Right) {
-                if (Clipboard.ContainsImage()) {
+        private void PictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (Clipboard.ContainsImage())
+                {
                     PasteImage(curPoint);
                     args.pictureBox.Invalidate();
                 }
             }
         }
 
-        protected override void OnMouseDown(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseDown(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left) {
                 drawing = true;
                 sPoint = e.Location;
@@ -37,7 +42,7 @@ namespace Paint {
             }
         }
 
-        protected override void OnMouseMove(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseMove(object sender, MouseEventArgs e) {
             curPoint = e.Location;
             if (drawing) {
                 // delete old
@@ -55,7 +60,7 @@ namespace Paint {
             }
         }
 
-        protected override void OnMouseUp(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseUp(object sender, MouseEventArgs e) {
             drawing = false;
             if (e.Button == MouseButtons.Left) {
                 if ((action == ClipboardAction.Copy) || (action == ClipboardAction.Cut)) {
@@ -88,7 +93,7 @@ namespace Paint {
 
         public override void UnloadTool() {
             base.UnloadTool();
-            args.pictureBox.MouseClick -= new MouseEventHandler(OnMouseClick);
+            args.pictureBox.MouseClick -= PictureBox_MouseClick;
         }
     }
 }

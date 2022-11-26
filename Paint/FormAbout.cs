@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public partial class FormAbout : Form {
         public FormAbout() {
             InitializeComponent();

@@ -1,4 +1,4 @@
-﻿namespace Paint {
+﻿namespace STT5_Retarded_Paint {
   partial class NewDialog {
     /// <summary>
     /// Required designer variable.

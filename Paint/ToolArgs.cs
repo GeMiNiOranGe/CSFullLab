@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class ToolArgs {
         public Bitmap bitmap;
         public PictureBox pictureBox;

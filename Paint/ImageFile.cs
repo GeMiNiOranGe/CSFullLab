@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class ImageFile {
         private string fileName;
         private Bitmap bitmap;

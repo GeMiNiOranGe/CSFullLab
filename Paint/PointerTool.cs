@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class PointerTool : Tool {
         public PointerTool(ToolArgs args) : base(args) {
             args.pictureBox.Cursor = Cursors.Arrow;

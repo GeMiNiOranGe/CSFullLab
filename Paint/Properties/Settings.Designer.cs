@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Paint.Properties {
+namespace STT5_Retarded_Paint.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

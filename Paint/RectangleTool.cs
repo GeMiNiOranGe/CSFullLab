@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class RectangleTool : RectangleToolBase {
         protected Pen outlinePen;
         protected Brush fillBrush;
@@ -14,8 +14,8 @@ namespace Paint {
         private Rectangle prevRect;
 
         public RectangleTool(ToolArgs args) : base(args) { }
-
-        protected override void OnMouseUp(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
             if (drawing) {
                 args.pictureBox.Invalidate();
 
@@ -33,7 +33,8 @@ namespace Paint {
             }
         }
 
-        protected override void OnMouseMove(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseMove(object sender, MouseEventArgs e)
+        { 
             if (drawing) {
                 // delete old rectangle
                 DrawRectangle(delPen, delBrush);
@@ -51,8 +52,8 @@ namespace Paint {
                 ShowPointInStatusBar(e.Location);
             }
         }
-
-        protected override void OnMouseDown(object sender, MouseEventArgs e) {
+        protected override void PictureBox_MouseDown(object sender, MouseEventArgs e) 
+        {
             if (e.Button == MouseButtons.Left) {
                 switch (args.settings.DrawMode) {
                     case DrawMode.Outline:

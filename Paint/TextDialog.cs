@@ -6,9 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Paint {
-    public partial class TextDialog : Form {
-        public TextDialog() {
+namespace STT5_Retarded_Paint
+{
+    public partial class TextDialog : Form
+    {
+        public TextDialog()
+        {
             InitializeComponent();
         }
 

@@ -5,7 +5,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 
-namespace Paint {
+namespace STT5_Retarded_Paint {
     public class FillTool : Tool {
         private int pixelSize;
         private BitmapData bData;
