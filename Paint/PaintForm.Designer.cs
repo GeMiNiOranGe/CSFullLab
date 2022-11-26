@@ -113,18 +113,21 @@
             // fileOpenMnu
             // 
             this.fileOpenMnu.Index = 1;
+            this.fileOpenMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
             this.fileOpenMnu.Text = "&Open...";
             this.fileOpenMnu.Click += new System.EventHandler(this.fileOpenMnu_Click);
             // 
             // fileSaveMnu
             // 
             this.fileSaveMnu.Index = 2;
+            this.fileSaveMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
             this.fileSaveMnu.Text = "&Save...";
             this.fileSaveMnu.Click += new System.EventHandler(this.fileSaveMnu_Click);
             // 
             // fileSaveAsMnu
             // 
             this.fileSaveAsMnu.Index = 3;
+            this.fileSaveAsMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS;
             this.fileSaveAsMnu.Text = "S&ave As...";
             this.fileSaveAsMnu.Click += new System.EventHandler(this.fileSaveAsMnu_Click);
             // 
@@ -136,6 +139,7 @@
             // fileExitMnu
             // 
             this.fileExitMnu.Index = 5;
+            this.fileExitMnu.Shortcut = System.Windows.Forms.Shortcut.AltF4;
             this.fileExitMnu.Text = "&Exit";
             this.fileExitMnu.Click += new System.EventHandler(this.fileExitMnu_Click);
             // 
@@ -151,18 +155,21 @@
             // editCutMnu
             // 
             this.editCutMnu.Index = 0;
+            this.editCutMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
             this.editCutMnu.Text = "&Cut";
             this.editCutMnu.Click += new System.EventHandler(this.editCutMnu_Click);
             // 
             // editCopyMnu
             // 
             this.editCopyMnu.Index = 1;
+            this.editCopyMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
             this.editCopyMnu.Text = "C&opy";
             this.editCopyMnu.Click += new System.EventHandler(this.editCopyMnu_Click);
             // 
             // editPasteMnu
             // 
             this.editPasteMnu.Index = 2;
+            this.editPasteMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
             this.editPasteMnu.Text = "&Paste";
             this.editPasteMnu.Click += new System.EventHandler(this.editPasteMnu_Click);
             // 
@@ -176,6 +183,7 @@
             // imageClearMnu
             // 
             this.imageClearMnu.Index = 0;
+            this.imageClearMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlDel;
             this.imageClearMnu.Text = "&Clear";
             this.imageClearMnu.Click += new System.EventHandler(this.imageClearMnu_Click);
             // 
@@ -189,18 +197,20 @@
             // helpAboutMnu
             // 
             this.helpAboutMnu.Index = 0;
+            this.helpAboutMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlH;
             this.helpAboutMnu.Text = "&About...";
             this.helpAboutMnu.Click += new System.EventHandler(this.helpAboutMnu_Click);
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 422);
+            this.statusBar.Location = new System.Drawing.Point(0, 493);
+            this.statusBar.Margin = new System.Windows.Forms.Padding(4);
             this.statusBar.Name = "statusBar";
             this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.pointPanel1,
             this.pointPanel2});
             this.statusBar.ShowPanels = true;
-            this.statusBar.Size = new System.Drawing.Size(739, 22);
+            this.statusBar.Size = new System.Drawing.Size(985, 27);
             this.statusBar.TabIndex = 1;
             // 
             // pointPanel1
@@ -229,11 +239,12 @@
             this.eraserBtn});
             this.toolsBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolsBar.DropDownArrows = true;
-            this.toolsBar.Location = new System.Drawing.Point(0, 61);
+            this.toolsBar.Location = new System.Drawing.Point(0, 75);
+            this.toolsBar.Margin = new System.Windows.Forms.Padding(4);
             this.toolsBar.MinimumSize = new System.Drawing.Size(30, 0);
             this.toolsBar.Name = "toolsBar";
             this.toolsBar.ShowToolTips = true;
-            this.toolsBar.Size = new System.Drawing.Size(30, 361);
+            this.toolsBar.Size = new System.Drawing.Size(30, 418);
             this.toolsBar.TabIndex = 2;
             this.toolsBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolsBar_ButtonClick);
             // 
@@ -289,17 +300,19 @@
             this.imgContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.imgContainer.Controls.Add(this.imageBox);
             this.imgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imgContainer.Location = new System.Drawing.Point(30, 61);
+            this.imgContainer.Location = new System.Drawing.Point(30, 75);
+            this.imgContainer.Margin = new System.Windows.Forms.Padding(4);
             this.imgContainer.Name = "imgContainer";
-            this.imgContainer.Size = new System.Drawing.Size(709, 361);
+            this.imgContainer.Size = new System.Drawing.Size(955, 418);
             this.imgContainer.TabIndex = 3;
             // 
             // imageBox
             // 
             this.imageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageBox.Location = new System.Drawing.Point(12, 12);
+            this.imageBox.Location = new System.Drawing.Point(16, 15);
+            this.imageBox.Margin = new System.Windows.Forms.Padding(4);
             this.imageBox.Name = "imageBox";
-            this.imageBox.Size = new System.Drawing.Size(240, 275);
+            this.imageBox.Size = new System.Drawing.Size(319, 338);
             this.imageBox.TabIndex = 0;
             this.imageBox.TabStop = false;
             this.imageBox.Paint += new System.Windows.Forms.PaintEventHandler(this.imageBox_Paint);
@@ -323,16 +336,18 @@
             this.panel1.Controls.Add(this.fillStyleCombo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 61);
+            this.panel1.Size = new System.Drawing.Size(985, 75);
             this.panel1.TabIndex = 4;
             // 
             // brushImageBox
             // 
             this.brushImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brushImageBox.Location = new System.Drawing.Point(271, 31);
+            this.brushImageBox.Location = new System.Drawing.Point(361, 38);
+            this.brushImageBox.Margin = new System.Windows.Forms.Padding(4);
             this.brushImageBox.Name = "brushImageBox";
-            this.brushImageBox.Size = new System.Drawing.Size(34, 24);
+            this.brushImageBox.Size = new System.Drawing.Size(45, 29);
             this.brushImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.brushImageBox.TabIndex = 14;
             this.brushImageBox.TabStop = false;
@@ -341,18 +356,20 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(186, 37);
+            this.label6.Location = new System.Drawing.Point(248, 46);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Texture Brush:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 37);
+            this.label5.Location = new System.Drawing.Point(4, 46);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Line Style";
             // 
@@ -360,17 +377,19 @@
             // 
             this.lineStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lineStyleCombo.FormattingEnabled = true;
-            this.lineStyleCombo.Location = new System.Drawing.Point(59, 34);
+            this.lineStyleCombo.Location = new System.Drawing.Point(79, 42);
+            this.lineStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.lineStyleCombo.Name = "lineStyleCombo";
-            this.lineStyleCombo.Size = new System.Drawing.Size(121, 21);
+            this.lineStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.lineStyleCombo.TabIndex = 11;
             // 
             // inverseLink
             // 
             this.inverseLink.AutoSize = true;
-            this.inverseLink.Location = new System.Drawing.Point(690, 37);
+            this.inverseLink.Location = new System.Drawing.Point(920, 46);
+            this.inverseLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inverseLink.Name = "inverseLink";
-            this.inverseLink.Size = new System.Drawing.Size(42, 13);
+            this.inverseLink.Size = new System.Drawing.Size(51, 16);
             this.inverseLink.TabIndex = 10;
             this.inverseLink.TabStop = true;
             this.inverseLink.Text = "Inverse";
@@ -380,9 +399,10 @@
             // 
             this.primColorBox.BackColor = System.Drawing.Color.DodgerBlue;
             this.primColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.primColorBox.Location = new System.Drawing.Point(702, 9);
+            this.primColorBox.Location = new System.Drawing.Point(936, 11);
+            this.primColorBox.Margin = new System.Windows.Forms.Padding(4);
             this.primColorBox.Name = "primColorBox";
-            this.primColorBox.Size = new System.Drawing.Size(25, 24);
+            this.primColorBox.Size = new System.Drawing.Size(33, 29);
             this.primColorBox.TabIndex = 9;
             this.primColorBox.TabStop = false;
             this.primColorBox.Click += new System.EventHandler(this.ColorBox_Click);
@@ -391,9 +411,10 @@
             // 
             this.secColorBox.BackColor = System.Drawing.Color.White;
             this.secColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.secColorBox.Location = new System.Drawing.Point(693, 3);
+            this.secColorBox.Location = new System.Drawing.Point(924, 4);
+            this.secColorBox.Margin = new System.Windows.Forms.Padding(4);
             this.secColorBox.Name = "secColorBox";
-            this.secColorBox.Size = new System.Drawing.Size(25, 24);
+            this.secColorBox.Size = new System.Drawing.Size(33, 29);
             this.secColorBox.TabIndex = 8;
             this.secColorBox.TabStop = false;
             this.secColorBox.Click += new System.EventHandler(this.ColorBox_Click);
@@ -401,36 +422,40 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(475, 11);
+            this.label4.Location = new System.Drawing.Point(633, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Gradiant Style:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(366, 11);
+            this.label3.Location = new System.Drawing.Point(488, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Width:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(186, 11);
+            this.label2.Location = new System.Drawing.Point(248, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Shape Style:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(4, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Fill Style:";
             // 
@@ -438,36 +463,40 @@
             // 
             this.gradiantStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gradiantStyleCombo.FormattingEnabled = true;
-            this.gradiantStyleCombo.Location = new System.Drawing.Point(560, 8);
+            this.gradiantStyleCombo.Location = new System.Drawing.Point(747, 10);
+            this.gradiantStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.gradiantStyleCombo.Name = "gradiantStyleCombo";
-            this.gradiantStyleCombo.Size = new System.Drawing.Size(121, 21);
+            this.gradiantStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.gradiantStyleCombo.TabIndex = 3;
             // 
             // widthCombo
             // 
             this.widthCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.widthCombo.FormattingEnabled = true;
-            this.widthCombo.Location = new System.Drawing.Point(407, 8);
+            this.widthCombo.Location = new System.Drawing.Point(543, 10);
+            this.widthCombo.Margin = new System.Windows.Forms.Padding(4);
             this.widthCombo.Name = "widthCombo";
-            this.widthCombo.Size = new System.Drawing.Size(62, 21);
+            this.widthCombo.Size = new System.Drawing.Size(81, 24);
             this.widthCombo.TabIndex = 2;
             // 
             // shapeStyleCombo
             // 
             this.shapeStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.shapeStyleCombo.FormattingEnabled = true;
-            this.shapeStyleCombo.Location = new System.Drawing.Point(260, 8);
+            this.shapeStyleCombo.Location = new System.Drawing.Point(347, 10);
+            this.shapeStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.shapeStyleCombo.Name = "shapeStyleCombo";
-            this.shapeStyleCombo.Size = new System.Drawing.Size(100, 21);
+            this.shapeStyleCombo.Size = new System.Drawing.Size(132, 24);
             this.shapeStyleCombo.TabIndex = 1;
             // 
             // fillStyleCombo
             // 
             this.fillStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fillStyleCombo.FormattingEnabled = true;
-            this.fillStyleCombo.Location = new System.Drawing.Point(59, 8);
+            this.fillStyleCombo.Location = new System.Drawing.Point(79, 10);
+            this.fillStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.fillStyleCombo.Name = "fillStyleCombo";
-            this.fillStyleCombo.Size = new System.Drawing.Size(121, 21);
+            this.fillStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.fillStyleCombo.TabIndex = 0;
             // 
             // imageList
@@ -486,16 +515,18 @@
             // 
             // PaintForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 444);
+            this.ClientSize = new System.Drawing.Size(985, 520);
             this.Controls.Add(this.imgContainer);
             this.Controls.Add(this.toolsBar);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu;
             this.Name = "PaintForm";
-            this.Text = "STT5_Retarded_Paint";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Paint";
             this.Load += new System.EventHandler(this.PaintForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pointPanel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pointPanel2)).EndInit();
