@@ -195,7 +195,7 @@
             // statusBar
             // 
             this.statusBar.Location = new System.Drawing.Point(0, 519);
-            this.statusBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.statusBar.Margin = new System.Windows.Forms.Padding(4);
             this.statusBar.Name = "statusBar";
             this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.pointPanel1,
@@ -231,7 +231,7 @@
             this.toolsBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolsBar.DropDownArrows = true;
             this.toolsBar.Location = new System.Drawing.Point(0, 75);
-            this.toolsBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toolsBar.Margin = new System.Windows.Forms.Padding(4);
             this.toolsBar.MinimumSize = new System.Drawing.Size(30, 0);
             this.toolsBar.Name = "toolsBar";
             this.toolsBar.ShowToolTips = true;
@@ -292,7 +292,7 @@
             this.imgContainer.Controls.Add(this.imageBox);
             this.imgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imgContainer.Location = new System.Drawing.Point(30, 75);
-            this.imgContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgContainer.Margin = new System.Windows.Forms.Padding(4);
             this.imgContainer.Name = "imgContainer";
             this.imgContainer.Size = new System.Drawing.Size(955, 444);
             this.imgContainer.TabIndex = 3;
@@ -301,7 +301,7 @@
             // 
             this.imageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox.Location = new System.Drawing.Point(16, 15);
-            this.imageBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imageBox.Margin = new System.Windows.Forms.Padding(4);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(319, 338);
             this.imageBox.TabIndex = 0;
@@ -327,7 +327,7 @@
             this.panel1.Controls.Add(this.fillStyleCombo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(985, 75);
             this.panel1.TabIndex = 4;
@@ -336,7 +336,7 @@
             // 
             this.brushImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.brushImageBox.Location = new System.Drawing.Point(361, 38);
-            this.brushImageBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brushImageBox.Margin = new System.Windows.Forms.Padding(4);
             this.brushImageBox.Name = "brushImageBox";
             this.brushImageBox.Size = new System.Drawing.Size(45, 29);
             this.brushImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -369,7 +369,7 @@
             this.lineStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lineStyleCombo.FormattingEnabled = true;
             this.lineStyleCombo.Location = new System.Drawing.Point(79, 42);
-            this.lineStyleCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lineStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.lineStyleCombo.Name = "lineStyleCombo";
             this.lineStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.lineStyleCombo.TabIndex = 11;
@@ -391,7 +391,7 @@
             this.primColorBox.BackColor = System.Drawing.Color.DodgerBlue;
             this.primColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.primColorBox.Location = new System.Drawing.Point(936, 11);
-            this.primColorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.primColorBox.Margin = new System.Windows.Forms.Padding(4);
             this.primColorBox.Name = "primColorBox";
             this.primColorBox.Size = new System.Drawing.Size(33, 29);
             this.primColorBox.TabIndex = 9;
@@ -403,7 +403,7 @@
             this.secColorBox.BackColor = System.Drawing.Color.White;
             this.secColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.secColorBox.Location = new System.Drawing.Point(924, 4);
-            this.secColorBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.secColorBox.Margin = new System.Windows.Forms.Padding(4);
             this.secColorBox.Name = "secColorBox";
             this.secColorBox.Size = new System.Drawing.Size(33, 29);
             this.secColorBox.TabIndex = 8;
@@ -455,7 +455,7 @@
             this.gradiantStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gradiantStyleCombo.FormattingEnabled = true;
             this.gradiantStyleCombo.Location = new System.Drawing.Point(747, 10);
-            this.gradiantStyleCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradiantStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.gradiantStyleCombo.Name = "gradiantStyleCombo";
             this.gradiantStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.gradiantStyleCombo.TabIndex = 3;
@@ -465,7 +465,7 @@
             this.widthCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.widthCombo.FormattingEnabled = true;
             this.widthCombo.Location = new System.Drawing.Point(543, 10);
-            this.widthCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.widthCombo.Margin = new System.Windows.Forms.Padding(4);
             this.widthCombo.Name = "widthCombo";
             this.widthCombo.Size = new System.Drawing.Size(81, 24);
             this.widthCombo.TabIndex = 2;
@@ -475,7 +475,7 @@
             this.shapeStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.shapeStyleCombo.FormattingEnabled = true;
             this.shapeStyleCombo.Location = new System.Drawing.Point(347, 10);
-            this.shapeStyleCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shapeStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.shapeStyleCombo.Name = "shapeStyleCombo";
             this.shapeStyleCombo.Size = new System.Drawing.Size(132, 24);
             this.shapeStyleCombo.TabIndex = 1;
@@ -485,7 +485,7 @@
             this.fillStyleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fillStyleCombo.FormattingEnabled = true;
             this.fillStyleCombo.Location = new System.Drawing.Point(79, 10);
-            this.fillStyleCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fillStyleCombo.Margin = new System.Windows.Forms.Padding(4);
             this.fillStyleCombo.Name = "fillStyleCombo";
             this.fillStyleCombo.Size = new System.Drawing.Size(160, 24);
             this.fillStyleCombo.TabIndex = 0;
@@ -513,7 +513,7 @@
             this.Controls.Add(this.toolsBar);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu;
             this.Name = "PaintForm";
             this.Text = "STT5_Retarded_Paint";
