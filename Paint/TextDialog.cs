@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,23 +15,23 @@ namespace STT5_Retarded_Paint
             InitializeComponent();
         }
 
-        private void fontBtn_Click(object sender, EventArgs e)
-        {
+        private void fontBtn_Click(object sender, EventArgs e) {
             FontDialog fontDlg = new FontDialog();
             fontDlg.Font = textBox.Font;
-
             if (fontDlg.ShowDialog() == DialogResult.OK)
                 textBox.Font = fontDlg.Font;
         }
 
-        public Font TextFont
-        {
-            get { return textBox.Font; }
+        public Font TextFont {
+            get {
+                return textBox.Font;
+            }
         }
 
-        public string ReturnText
-        {
-            get { return textBox.Text; }
+        public string ReturnText {
+            get {
+                return textBox.Text;
+            }
         }
     }
 }
