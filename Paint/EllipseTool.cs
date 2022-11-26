@@ -4,9 +4,9 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Paint {
+
     public class EllipseTool : RectangleTool {
         public EllipseTool(ToolArgs args) : base(args) { }
-
         protected override void DrawRectangle(Pen outlinePen, Brush fillBrush) {
             if (fillBrush is LinearGradientBrush) {
                 if ((rect.Width > 0) && (rect.Height > 0)) {
@@ -17,7 +17,6 @@ namespace Paint {
                     //outlinePen = new Pen(fillBrush, args.settings.Width);
                 }
             }
-
             switch (args.settings.DrawMode) {
                 case DrawMode.Outline:
                     g.DrawEllipse(outlinePen, rect);
